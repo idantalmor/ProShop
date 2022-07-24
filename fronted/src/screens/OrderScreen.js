@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { PayPalButton } from "react-paypal-button-v2";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import {
   Row,
@@ -208,10 +207,10 @@ const OrderScreen = () => {
                   {!sdkReady ? (
                     <Loader />
                   ) : (
-                    <PayPalButton
-                      amount={order.totalPrice}
-                      onSuccess={successPaymentHandler}
-                    />
+                    // <PayPalButton
+                    //   amount={order.totalPrice}
+                    //   onSuccess={successPaymentHandler}
+                    // />
                   )}
                 </ListGroup.Item>
               )}
